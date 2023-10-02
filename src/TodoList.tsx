@@ -45,9 +45,15 @@ const TodoList = ({ searchQuery }: TodoListProps) => {
   }
 
   return (
-    <div>
+    <div className="space-y-2">
       {filteredData.map((item) => {
-        return <TodoItem key={item.id} todo={item} />;
+        return (
+          <TodoItem
+            key={item.id}
+            title={item.title}
+            completed={item.completed}
+          />
+        );
       })}
     </div>
   );

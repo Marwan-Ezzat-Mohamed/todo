@@ -1,5 +1,9 @@
-const TodoItem = ({ todo }: any) => {
-  const { title, completed } = todo;
+interface Todo {
+  title: string;
+  completed: boolean;
+}
+
+const TodoItem = ({ title, completed }: Todo) => {
   return (
     <li className="flex justify-between items-center">
       <label
